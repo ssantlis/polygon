@@ -49,4 +49,42 @@ int main() {
 /* Общая сложность алгоритма составляет O(N), 
 так как все основные операции выполняются линейно 
 по отношению к количеству элементов в массиве */
+
+
+#include <gtest/gtest.h>
+#include <vector>
+#include <string>
+
+extern std::vector<int> countValues(const std::vector<std::string>& arr);
+
+TEST(CountValuesTest, HandlesEmptyArray) {
+    std::vector<std::string> arr = {};
+    std::vector<int> result = countValues(arr);
+    EXPECT_EQ(result, std::vector<int>{});
+}
+
+TEST(CountValuesTest, HandlesSingleElement) {
+    std::vector<std::string> arr = {"apple"};
+    std::vector<int> result = countValues(arr);
+    EXPECT_EQ(result, std::vector<int>{1});
+}
+
+TEST(CountValuesTest, HandlesMultipleSameElements) {
+    std::vector<std::string> arr = {"apple", "apple", "apple"};
+    std::vector<int> result = countValues(arr);
+    EXPECT_EQ(result, std::vector<int>{3, 3, 3});
+}
+
+TEST(CountValuesTest, HandlesMultipleUniqueElements) {
+    std::vector<std::string> arr = {"apple", "banana", "orange"};
+    std::vector<int> result = countValues(arr);
+    EXPECT_EQ(result, std::vector<int>{1, 1, 1});
+}
+
+TEST(CountValuesTest, HandlesMixedElements) {
+    std::vector<std::string> arr = {"apple", "banana", "apple", "orange", "banana"};
+    std::vector<int> result = countValues(arr);
+    EXPECT_EQ(result, std::vector<int>{2, 2, 2, 1, 2});
+}
+
  
