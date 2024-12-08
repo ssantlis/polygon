@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include <vector>
 #include <string>
-#include "gtest/gtest.h"
+#include "googletest/include/gtest/gtest.h"
 
 int main() {
     int size;
