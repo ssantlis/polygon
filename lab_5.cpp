@@ -1,4 +1,4 @@
-// Сортировка вставками (1)
+// Сортировка вставками (1.1)
 #include <iostream> 
 #include <vector> 
  
@@ -64,7 +64,7 @@ void quickSort(std::vector<int>& arr, int low, int high) {
     }
 }
 
-int main() {
+int main1() {
     std::vector<int> arr = { 10, 7, 8, 9, 1, 5 };
 
     std::cout << "Original array:\n";
@@ -133,7 +133,7 @@ void radixSort(std::vector<int>& arr) {
         countingSort(arr, place); 
 } 
  
-int main() { 
+int main2() { 
     std::vector<int> arr = {170, 45, 75, 90, 802, 24, 2, 66}; 
  
     std::cout << "Исходный массив:\n"; 

@@ -1,4 +1,4 @@
-//Подсчет значений в массиве 1q
+//Подсчет значений в массиве
 
 #include <iostream>
 #include <unordered_map>
